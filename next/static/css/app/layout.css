@@ -1,0 +1,348 @@
+/*!***************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./styles/styles.css ***!
+  \***************************************************************************************************************************************************************************************************************************************************************/
+/* Reseteo básico */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+/* Colores principales */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+  --accent-color: #e63946;
+}
+
+/* Encabezados */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--dark-color);
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.75rem;
+}
+
+/* Enlaces */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+/* Botones */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.btn-light {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+}
+
+.btn-light:hover {
+  background-color: #e2e6ea;
+  transform: scale(1.05);
+}
+
+/* Contenedor */
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--dark-color);
+  padding: 1rem 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.navbar a {
+  color: var(--light-color);
+  margin: 0 0.5rem;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  color: var(--primary-color);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* Hero / Header */
+header {
+  background: linear-gradient(45deg, var(--primary-color), var(--dark-color));
+  color: var(--light-color);
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+header h1 {
+  font-size: 3rem;
+}
+
+header p {
+  font-size: 1.25rem;
+}
+
+header .btn {
+  margin-top: 1.5rem;
+}
+
+/* Secciones */
+section {
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+section:nth-child(even) {
+  background-color: var(--light-color);
+}
+
+section h2 {
+  margin-bottom: 1.5rem;
+}
+
+section p {
+  margin-bottom: 2rem;
+}
+
+/* Listas */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  position: relative;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+}
+
+ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+footer p {
+  margin-bottom: 0.5rem;
+}
+
+footer a {
+  color: var(--primary-color);
+}
+
+footer a:hover {
+  color: var(--accent-color);
+}
+
+/* Animaciones */
+.btn,
+a {
+  transition: all 0.3s ease;
+}
+
+header h1,
+header p,
+section h2,
+section p {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section:nth-child(even) {
+  animation-delay: 0.2s;
+}
+
+section:nth-child(odd) {
+  animation-delay: 0.4s;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.25rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 2rem 1rem;
+  }
+
+  .navbar {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.75rem;
+  }
+
+  header p {
+    font-size: 0.875rem;
+  }
+}
+
+/* Portfolio Styles */
+.portfolio-page {
+  text-align: center;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.portfolio-item {
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.portfolio-item h3 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+  color: var(--dark-color);
+}
+
+
+
+
+/* Estilos para las tablas de resultados */
+table.population-table {
+  width: 100%;
+  margin-top: 2rem;
+  border-collapse: collapse;
+  border: 1px solid #eaeaea;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+table.population-table th, table.population-table td {
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid #eaeaea;
+}
+
+table.population-table th {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 600;
+}
+
+table.population-table tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+table.population-table tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+table.population-table tr:hover {
+  background-color: #e2e6ea;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Estilos para los títulos de las tablas */
+table.population-table h2 {
+  font-size: 1.75rem;
+  color: var(--dark-color);
+  margin-bottom: 1.5rem;
+}
+
+
