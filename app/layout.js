@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link href="/about" className="nav-link">
+                  <Link href="https://dalejomoreno.github.io/portfolio/" className="nav-link">
                     About
                   </Link>
                 </li>
